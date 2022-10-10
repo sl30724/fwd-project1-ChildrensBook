@@ -8,6 +8,13 @@ let pubYear = [];
 let characterGender = [];
 let genre = [];
 let characterType = [];
+let maleCount2019a = 0;
+let femaleCount2019a = 0;
+let maleCount2019b = 0;
+let femaleCount2019b = 0;
+let maleCount2018 = 0;
+let femaleCount2018 = 0;
+
 function preload() {
   table = loadTable("dataset.csv", "csv", "header")
 }
@@ -38,6 +45,9 @@ function setup() {
   }
   // minYear: 1960, maxYear: 2019
   // yearMinMax();
+  genderRatio2019a();
+  genderRatio2019b();
+  genderRatio2018();
 }
 
 function draw() {
@@ -56,6 +66,47 @@ function mainGraph() {
 
 }
 
+function genderRatio2019a() {
+  for (let i = 0; i < numRows; i++) {
+    if (pubYear[i] == 2019 && genre[i] == "fiction" && characterType[i] == "human") {
+      if (characterGender[i] == "male") {
+        maleCount2019a++;
+      } else if (characterGender[i] == "female") {
+        femaleCount2019a++;
+      }
+    }
+  }
+  let ratio2019a = maleCount2019a / femaleCount2019a;
+  print(ratio2019a);
+}
+
+function genderRatio2019b() {
+  for (let i = 0; i < numRows; i++) {
+    if (pubYear[i] == 2019 && genre[i] == "non-fiction" && characterType[i] == "human") {
+      if (characterGender[i] == "male") {
+        maleCount2019b++;
+      } else if (characterGender[i] == "female") {
+        femaleCount2019b++;
+      }
+    }
+  }
+  let ratio2019b = maleCount2019b / femaleCount2019b;
+  print(ratio2019b);
+}
+
+function genderRatio2018() {
+  for (let i = 0; i < numRows; i++) {
+    if (pubYear[i] == 2018 && genre[i] == "fiction" && characterType[i] == "human") {
+      if (characterGender[i] == "male") {
+        maleCount2018++;
+      } else if (characterGender[i] == "female") {
+        femaleCount2018++;
+      }
+    }
+  }
+  let ratio2018 = maleCount2018 / femaleCount2018;
+  print(ratio2018);
+}
 // find max and min year in data
 // let yearMin, yearMax = 0;
 // function yearMinMax() {
