@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sketch</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Sketch</title>
 
-    <script src="libraries/p5.min.js"></script>
-    <script src="libraries/p5.sound.min.js"></script>
-    <!-- easycam library -->
-    <script src="https://freshfork.github.io/p5.EasyCam/p5.easycam.js"></script>
-    <!-- including typed.js library -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="main.js"></script>
-  </head>
+  <link rel="stylesheet" type="text/css" href="style.css">
 
-  <body>
-    <div id="typed-strings">
-      <p>Typed.js is a <strong>JavaScript</strong> library.
-        <br
-        >It <em>types</em> out sentences. </p>
-    </div>
-    <span id="typed"></span>
-    <script src="sketch.js"></script>
-  </body>
+  <script src="libraries/p5.min.js"></script>
+  <script src="libraries/p5.sound.min.js"></script>
+  <!-- easycam library -->
+  <script src="https://freshfork.github.io/p5.EasyCam/p5.easycam.js"></script>
+  <!-- including typed.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+  href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+  rel="stylesheet">
+  <!-- call p5js -->
+  <script src="main.js"></script>
+</head>
 
-  <script>
-    var typed = new Typed('#typed', {
-      stringsElement: '#typed-strings',
-      typeSpeed: 60,
-    });
-  </script>
+<body>
+  <div id="typed-strings">
+    <p>Typed.js is a <strong>JavaScript</strong> library.
+      <br>It <em>types</em> out sentences.
+    </p>
+  </div>
+  <span id="typed"></span>
+  <script src="sketch.js"></script>
+</body>
+
+<script>
+  var typed = new Typed('#typed', {
+    stringsElement: '#typed-strings',
+    typeSpeed: 60,
+  });
+</script>
 
 </html>
