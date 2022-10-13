@@ -8,36 +8,49 @@
   <title>Sketch</title>
 
   <link rel="stylesheet" type="text/css" href="style.css">
-
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- include libraries -->
   <script src="libraries/p5.min.js"></script>
   <script src="libraries/p5.sound.min.js"></script>
   <!-- easycam library -->
   <script src="https://freshfork.github.io/p5.EasyCam/p5.easycam.js"></script>
   <!-- including typed.js library -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <!-- Google fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-  href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Playfair+Display:wght@400;500;600;700&display=swap"
-  rel="stylesheet">
-  <!-- call p5js -->
-  <script src="main.js"></script>
+  <!-- call sketch.js -->
+  <script src="sketch.js"></script>
 </head>
 
 <body>
-  <div id="typed-strings">
-    <p>Typed.js is a <strong>JavaScript</strong> library.
-      <br>It <em>types</em> out sentences.
+  <header>
+    <h1>Has Gender Representation in Children's Books Improved Overtime?</h1>
+    <p>The 2021 study, <a
+        href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0260566#pone-0260566-g005">60 years of
+        gender representation in children's books</a>, provides an up-to-date estimate of the relative proportion of
+      males and females featured as single protagonists in 3,280 children’s books (0–16 years) published between
+      1960–2020.
+      Their data shows that the proportion of female protagonists has increased over this 60-year period, even though
+      male protagonists remain overrepresented even in recent years.
+      But has the gender representation in children's books really improved?
     </p>
-  </div>
-  <span id="typed"></span>
-  <script src="sketch.js"></script>
+  </header>
+  <main>
+    <div id="typed-intro">
+      <p>Gender Representation in Children's Books blah blah blah blah blah gjeirogjdfgjs;rijge;igj</p>
+    </div>
+    <span class="typed"></span>
+    <div id="dataViz-1">
+    </div>
+  </main>
 </body>
 
 <script>
-  var typed = new Typed('#typed', {
-    stringsElement: '#typed-strings',
+  var typed = new Typed('.typed', {
+    stringsElement: '#typed-intro',
     typeSpeed: 60,
   });
 </script>
