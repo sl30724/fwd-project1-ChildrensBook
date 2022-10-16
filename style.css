@@ -4,6 +4,7 @@ body {
   padding: 0;
   background-color: #Fcf5ef
 }
+
 /* typography */
 h1 {
   font-family: "Playfair Display", serif;
@@ -11,42 +12,49 @@ h1 {
   font-size: 96px;
   letter-spacing: -1.5px;
 }
+
 h2 {
   font-family: "Playfair Display", serif;
   font-weight: 400;
   font-size: 64px;
   letter-spacing: -0.5px;
 }
+
 h3 {
   font-family: "Playfair Display", serif;
   font-weight: 400;
   font-size: 48px;
   letter-spacing: -0px;
 }
+
 h4 {
   font-family: "Playfair Display", serif;
   font-weight: 400;
   font-size: 34px;
   letter-spacing: 0.25px;
 }
+
 h5 {
   font-family: "Playfair Display", serif;
   font-weight: 400;
   font-size: 24px;
   letter-spacing: 0px;
 }
+
 h6 {
   font-family: "Playfair Display", serif;
   font-weight: 500;
   font-size: 20px;
   letter-spacing: 0.15px;
 }
+
 .subtitle1 {
   font-family: "Playfair Display", serif;
   font-weight: 400;
   font-size: 16px;
   letter-spacing: 0.15px;
 }
+
 p {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -54,25 +62,36 @@ p {
   letter-spacing: 0.5px;
   line-height: 150%;
 }
+
+.small-p {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  line-height: 140%;
+}
+
 .caption {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 12px;
   letter-spacing: 0.4px;
 }
+
 .overline {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 10px;
   letter-spacing: 1.5px;
 }
+
 .typed {
-  /* width: 40%; */
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 16px;
   letter-spacing: 0.5px;
   line-height: 150%;
+  width: 40%;
 }
 
 canvas {
@@ -81,7 +100,7 @@ canvas {
 
 header {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -91,23 +110,30 @@ header {
 header p {
   max-width: 60%;
 }
+header .caption {
+  font-style: italic;
+}
 
-main {
+#data1 {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 30px;
 }
 
-#typed-intro{
-  min-width: 40%;
+#typed-intro {
+  /* width: 40%; */
   text-align: center;
+  padding: 30px;
 }
 
 #dataViz-1 {
+  width: 60%;
   display: flex;
-  flex-flow: row wrap;
-  text-align: center;
+  flex-flow: column-reverse wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
 }

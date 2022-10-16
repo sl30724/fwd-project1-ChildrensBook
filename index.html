@@ -21,38 +21,61 @@
   <script src="https://freshfork.github.io/p5.EasyCam/p5.easycam.js"></script>
   <!-- including typed.js library -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <!-- including gsap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
   <!-- call sketch.js -->
-  <script src="sketch.js"></script>
+  <script defer src="typedeffect.js"></script>
+  <script defer src="sketch.js"></script>
 </head>
 
 <body>
   <header>
     <h1>Has Gender Representation in Children's Books Improved Overtime?</h1>
-    <p>The 2021 study, <a
+    <p>This data visualization project displays the data from the 2021 study, <a
         href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0260566#pone-0260566-g005">60 years of
-        gender representation in children's books</a>, provides an up-to-date estimate of the relative proportion of
+        gender representation in children's books</a>. Their data provides an up-to-date estimate of the relative
+      proportion of
       males and females featured as single protagonists in 3,280 children’s books (0–16 years) published between
       1960–2020.
-      Their data shows that the proportion of female protagonists has increased over this 60-year period, even though
-      male protagonists remain overrepresented even in recent years.
-      But has the gender representation in children's books really improved?
+    </p>
+    <p class="small-p">
+      The next part of the website uses scrolling effect.
     </p>
   </header>
-  <main>
+  <div id="data1">
+    <div id="typed-intro">
+      <p>Their data shows that the proportion of female protagonists has increased over this 60-year period, even though
+        male protagonists remain overrepresented even in recent years.<br>
+        But has the gender representation in children's books really improved?</p>
+    </div>
+    <span class="typed"></span>
+    <div id="dataViz-1">
+      <div id="sketch1"></div>
+      <p class="caption">
+        blue: fiction<br>
+        green: nonfiction<br>
+        yellow: human character<br>
+        orange: non-human character
+      </p>
+    </div>
+    <div id="desc1"></div>
+  </div>
+  <div id="data2">
     <div id="typed-intro">
       <p>Gender Representation in Children's Books blah blah blah blah blah gjeirogjdfgjs;rijge;igj</p>
     </div>
     <span class="typed"></span>
-    <div id="dataViz-1">
+    <div id="dataViz-2">
     </div>
-  </main>
+  </div>
 </body>
-
-<script>
+<!-- <script>
   var typed = new Typed('.typed', {
     stringsElement: '#typed-intro',
     typeSpeed: 60,
+    showCursor: false
   });
-</script>
+</script> -->
 
 </html>

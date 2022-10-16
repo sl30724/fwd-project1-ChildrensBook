@@ -48,7 +48,8 @@ const s1 = function (p) {
     canvasW = p.windowWidth * 3 / 5;
     canvasH = p.windowHeight * 4 / 5;
     myCanvas = p.createCanvas(canvasW, canvasH, p.WEBGL);
-    //myCanvas.position(windowWidth / 2, (windowHeight - canvasH) / 2 + 300);
+    myCanvas.parent("dataViz-1");
+    //myCanvas.position(p.windowWidth / 2, (p.windowHeight - p.canvasH) / 2);
 
     // set font
     p.textFont(font);
@@ -56,6 +57,7 @@ const s1 = function (p) {
     // set the camera
     easyCam = p.createEasyCam();
     easyCam.setState(camState, 2000);
+    easyCam.state_reset = camState;
     document.oncontextmenu = function () { return false; }
     //change cursor to hand
     p.cursor("grab");
@@ -87,15 +89,86 @@ const s1 = function (p) {
     p.box(boxSize);
     p.push();
     p.translate(-canvasW / 2, -canvasH / 2, -boxSize / 2);
-    fiction.dots();
-    nonfiction.dots();
-    human.dots();
-    nonhuman.dots();
+    fiction.graph(p);
+    nonfiction.graph(p);
+    human.graph(p);
+    nonhuman.graph(p);
     p.pop();
   };
 }
 
-let sketch1 = new p5(s1);
+let sketch1 = new p5(s1, "sketch1");
+
+const d1 = function (p) {
+  // p.preload = function () {
+  //   table = p.loadTable("assets/dataset.csv", "csv", "header");
+  //   font = p.loadFont("assets/Lato-Light.ttf");
+  // };
+  p.setup = function () {
+    canvasW = 200;
+    canvasH = 100;
+    myCanvas = p.createCanvas(canvasW, canvasH);
+    myCanvas.parent("desc1");
+    p.textFont(font);
+  }
+  p.draw = function() {
+    p.background(p.color(light));
+    p.textSize(5);
+    p.fill(p.color(dark));
+    p.textAlign(p.CENTER);
+    p.text("blue: fiction", canvasW/2, canvasH/2);
+  }
+}
+
+let desc1 = new p5(d1, "desc1");
+
+const s2 = function (p) {
+  p.setup = function () {
+    // set canvas
+    canvasW = p.windowWidth * 3 / 5;
+    canvasH = p.windowHeight * 4 / 5;
+    myCanvas = p.createCanvas(canvasW, canvasH, p.WEBGL);
+
+    // set font
+    p.textFont(font);
+
+    // set the camera
+    // easyCam = p.createEasyCam();
+    // easyCam.setState(camState, 2000);
+    // easyCam.state_reset = camState;
+    // document.oncontextmenu = function () { return false; }
+    //change cursor to hand
+    // p.cursor("grab");
+
+    // get rows and cols of dataset
+    numRows = table.getRowCount();
+    numCols = table.getColumnCount();
+    p.print(`numRows ${numRows}, numCols ${numCols}`)
+
+    // load data
+    for (let i = 0; i < numRows; i++) {
+      pubYear[i] = table.getNum(i, 3);
+      characterGender[i] = table.getString(i, 6);
+      genre[i] = table.getString(i, 7);
+      characterType[i] = table.getString(i, 8);
+    }
+    // get gender ratio of each filter using class
+    fiction.getRatio();
+  };
+  p.draw = function () {
+    p.background(p.color(light));
+    p.noFill();
+    p.stroke(dark);
+    p.strokeWeight(0.5);
+    p.box(boxSize);
+    p.push();
+    p.translate(-canvasW / 2, -canvasH / 2, -boxSize / 2);
+    fiction.graph(p);
+    p.pop();
+  };
+}
+
+let sketch2 = new p5(s2, "dataViz-2")
 
 class Filter {
   filteredRatioArr = [];
@@ -133,7 +206,7 @@ class Filter {
     console.log(this.filteredRatioArr);
   }
 
-  dots() {
+  graph(p) {
     // x-year y-gender ratio z-filter by genre or character
     let gapx = boxSize / (this.filteredRatioArr.length - 1);
     let gapz = boxSize / 5;
@@ -142,14 +215,14 @@ class Filter {
       let y = p.map(this.filteredRatioArr[i], 0, 2.5, canvasH / 2 + boxSize / 2, canvasH / 2 - boxSize / 2, true);
       let z = gapz * this.zPosition;
       p.strokeWeight(5);
-      p.stroke(this.color);
+      p.stroke(p.color(this.color));
       p.point(x, y, z);
       // tag
       p.push();
       p.translate(0, 0, z);
       p.textSize(5);
       p.fill("black");
-      p.textAlign(CENTER);
+      p.textAlign(p.CENTER);
       p.text(this.filteredRatioArr[i].toFixed(2), x, y - 10);
       p.pop();
 
