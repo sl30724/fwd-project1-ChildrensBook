@@ -85,6 +85,33 @@ p {
   letter-spacing: 1.5px;
 }
 
+/* .typed-1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 150%;
+  width: 40%;
+  color:#31393c;
+}
+.typed-2 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 150%;
+  width: 40%;
+  color:#31393c;
+}
+.typed-3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 150%;
+  width: 40%;
+  color:#31393c;
+} */
 .typed {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -92,6 +119,7 @@ p {
   letter-spacing: 0.5px;
   line-height: 150%;
   width: 40%;
+  color:#31393c;
 }
 
 canvas {
@@ -105,28 +133,35 @@ header {
   align-items: center;
   text-align: center;
   padding: 30px;
+  min-height: 100%;
+  color:#31393c;
 }
 
-header p {
-  max-width: 60%;
-}
-header .caption {
+header .small-p {
   font-style: italic;
 }
 
-#data1 {
+.data {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 30px;
+  padding: 50px;
 }
 
-#typed-intro {
-  /* width: 40%; */
+#data1-exp {
   text-align: center;
-  padding: 30px;
+  width: 40%;
+}
+
+#data2-exp {
+  text-align: center;
+  width: 40%;
+}
+#data3-exp {
+  text-align: center;
+  width: 40%;
 }
 
 #dataViz-1 {
@@ -136,4 +171,31 @@ header .caption {
   justify-content: center;
   align-items: center;
   text-align: left;
+  color:#31393c;
+}
+#dataViz-2 {
+  width: 60%;
+}
+#dataViz-3 {
+  width: 60%;
+}
+
+span.blue {
+  font-weight: 700;
+  color: blue;
+}
+
+span.green {
+  font-weight: 700;
+  color: green;
+}
+
+span.yellow {
+  font-weight: 700;
+  color: gold;
+}
+
+span.orange {
+  font-weight: 700;
+  color: orange;
 }
