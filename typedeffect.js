@@ -3,28 +3,12 @@ var typed = new Typed('.typed', {
   typeSpeed: 60,
   showCursor: false
 });
-// var typed1 = new Typed('.typed-1', {
-//   stringsElement: '#data1-exp',
-//   typeSpeed: 60,
-//   showCursor: false
-// });
-// var typed2 = new Typed('.typed-2', {
-//   stringsElement: '#data2-exp',
-//   typeSpeed: 60,
-//   showCursor: false
-// });
-// var typed3 = new Typed('.typed-3', {
-//   stringsElement: '#data3-exp',
-//   typeSpeed: 60,
-//   showCursor: false
-// });
-
 
 gsap.registerPlugin(ScrollTrigger);
-gsap.from("#dataViz-1", {
+gsap.from("#data1", {
   scrollTrigger: {
-    trigger: "#dataViz-1",
-    start: "top center",
+    trigger: "#data1",
+    start: "center center",
     end: "bottom 100px",
     toggleActions: "restart none none none",
   },
@@ -32,10 +16,10 @@ gsap.from("#dataViz-1", {
   duration: 3
 });
 
-gsap.from("#dataViz-2", {
+gsap.from("#data2", {
   scrollTrigger: {
-    trigger: "#dataViz-2",
-    start: "top center",
+    trigger: "#data2",
+    start: "center center",
     end: "bottom 100px",
     toggleActions: "restart none none none",
   },
@@ -43,10 +27,10 @@ gsap.from("#dataViz-2", {
   duration: 5
 });
 
-gsap.from("#dataViz-3", {
+gsap.from("#data3", {
   scrollTrigger: {
-    trigger: "#dataViz-3",
-    start: "top center",
+    trigger: "#data3",
+    start: "center center",
     end: "bottom 100px",
     toggleActions: "restart none none none",
   },

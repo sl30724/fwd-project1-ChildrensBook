@@ -119,6 +119,7 @@ p {
   letter-spacing: 0.5px;
   line-height: 150%;
   width: 40%;
+  height: 100%;
   color:#31393c;
 }
 
@@ -132,7 +133,7 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 30px;
+  padding: 50px;
   min-height: 100%;
   color:#31393c;
 }
@@ -178,6 +179,16 @@ header .small-p {
 }
 #dataViz-3 {
   width: 60%;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+  color: #31393c;
+  font-style: italic;
 }
 
 span.blue {
