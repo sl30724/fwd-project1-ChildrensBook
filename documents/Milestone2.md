@@ -29,4 +29,7 @@ I struggled a lot with making good visualization design choices that are reasona
 - [Global and instance mode](https://github.com/processing/p5.js/wiki/Global-and-instance-mode)
 
 ### typed.js
-- [typed.js github](https://github.com/mattboldt/typed.js)
+- [typed.js Github](https://github.com/mattboldt/typed.js)
+
+### GSAP
+- [GreenSock Docs](https://greensock.com/docs/)
