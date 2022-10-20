@@ -32,7 +32,6 @@ See (this Figma)[https://www.figma.com/file/XCnXc4sXzDBG3rcI3DzmhE/Web-Front-End
 
 ### Design inspirations:
 - https://codepen.io/ste-vg/pen/GRooLza
-- 
 
 # Goals
 ### MVP
